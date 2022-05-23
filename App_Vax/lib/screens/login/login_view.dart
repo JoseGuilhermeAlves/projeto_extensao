@@ -6,8 +6,6 @@ import 'package:app_vax/screens/menu/menu_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:get/get.dart';
-
 class Login extends StatefulWidget {
   Login();
 
@@ -26,32 +24,11 @@ class _LoginState extends State<Login> {
 
   final TextEditingController _controller2 = TextEditingController();
 
-  TextEditingController _controllerDialog = TextEditingController();
-
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
-  final GlobalKey<FormState> _dialogFormKey = GlobalKey<FormState>();
 
   @override
   void initState() {
     super.initState();
-  }
-
-  checkVersion(var version) async {
-    if (IO.Platform.isAndroid) {
-      print("its android!");
-      /* final newVersion = NewVersion(
-        androidId: "br.com.nlphd.PhdInventoryManager",
-      );
-
-      newVersion.showAlertIfNecessary(context: context);*/
-    } else if (IO.Platform.isWindows) {
-      /*    updater.updateWindows();
-       Directory tempDir = await getTemporaryDirectory();
-    File testFile = File(tempDir.path.toString() + "/confirmRelease.txt");
-    testFile.writeAsString("FUNCIONA RELEASE");
-    updater.updateWindows(version);
-    print("Version check!");*/
-    }
   }
 
   @override
@@ -82,7 +59,7 @@ class _LoginState extends State<Login> {
               Positioned(
                   left: 0,
                   top: 0,
-                  bottom: 0,
+                  //bottom: 0,
                   child: Column(children: <Widget>[
                     Container(
                         decoration: BoxDecoration(
@@ -95,7 +72,7 @@ class _LoginState extends State<Login> {
                         child: SingleChildScrollView(
                           child: Column(children: [
                             const SizedBox(
-                              height: 20,
+                              height: 10,
                             ),
                             Row(children: [
                               /*Padding(
@@ -164,16 +141,18 @@ class _LoginState extends State<Login> {
                                 ),
                               ),*/
                               const SizedBox(
-                                width: 19,
+                                width: 150,
                               ),
                               Column(children: [
                                 Container(
                                     height: 100,
                                     child: const Text(
-                                      "Conferência Entrada",
+                                      "App Vax",
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
-                                          fontSize: 65, color: Colors.white),
+                                          fontSize: 80,
+                                          color:
+                                              Color.fromARGB(188, 59, 57, 57)),
                                     )),
                                 const SizedBox(
                                   height: 50,
@@ -189,12 +168,12 @@ class _LoginState extends State<Login> {
                                     ))),*/
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      horizontal: 30),
+                                      horizontal: 50),
                                   child: Container(),
                                 ),
                               ]),
                               const SizedBox(
-                                width: 100,
+                                width: 300,
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(

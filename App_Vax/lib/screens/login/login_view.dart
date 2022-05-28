@@ -141,7 +141,7 @@ class _LoginState extends State<Login> {
                                 ),
                               ),*/
                               const SizedBox(
-                                width: 150,
+                                width: 50,
                               ),
                               Column(children: [
                                 Container(
@@ -150,12 +150,23 @@ class _LoginState extends State<Login> {
                                       "App Vax",
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
-                                          fontSize: 80,
+                                          fontSize: 60,
                                           color:
                                               Color.fromARGB(188, 59, 57, 57)),
                                     )),
-                                const SizedBox(
-                                  height: 50,
+                                Container(
+                                    height: size.height / 2,
+                                    width: size.width / 3,
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/Greenlight_Vaccinations.png"),
+                                      fit: BoxFit.fitWidth,
+                                    ))),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 30),
+                                  child: Container(),
                                 ),
                                 /*  Container(
                                     height: size.height / 2,
@@ -223,110 +234,26 @@ class _LoginState extends State<Login> {
                                           ),
                                         ),
                                         const SizedBox(
-                                          height: 90,
-                                        ),
-                                        Container(
-                                          width: size.width / 5,
-                                          height: size.height / 15,
-                                          child: TextFormField(
-                                            controller: _controller,
-                                            autocorrect: false,
-                                            autofocus: true,
-                                            cursorColor: Colors.white,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900),
-                                            onChanged: (String data) {
-                                              _username = data;
-                                            },
-                                            decoration: InputDecoration(
-                                              hintText: 'Usuário',
-                                              hintStyle: TextStyle(
-                                                  color: Colors.grey.shade900),
-                                              floatingLabelBehavior:
-                                                  FloatingLabelBehavior.always,
-                                              fillColor: Colors.grey.shade900,
-                                              contentPadding:
-                                                  const EdgeInsets.only(
-                                                      left: 14.0,
-                                                      bottom: 8.0,
-                                                      top: 8.0),
-                                              focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    color:
-                                                        Colors.grey.shade900),
-                                                borderRadius:
-                                                    BorderRadius.circular(25.7),
-                                              ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    color:
-                                                        Colors.grey.shade900),
-                                                borderRadius:
-                                                    BorderRadius.circular(25.7),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          width: size.width / 5,
-                                          height: size.height / 15,
-                                          child: TextFormField(
-                                            controller: _controller2,
-                                            autocorrect: false,
-                                            autofocus: false,
-                                            obscureText: true,
-                                            cursorColor: Colors.grey.shade900,
-                                            style: TextStyle(
-                                                color: Colors.grey.shade900),
-                                            onChanged: (String data) {
-                                              _password = data;
-                                              print(_password);
-                                            },
-                                            decoration: InputDecoration(
-                                              hintText: 'Senha',
-                                              hintStyle: TextStyle(
-                                                  color: Colors.grey.shade900),
-                                              floatingLabelBehavior:
-                                                  FloatingLabelBehavior.always,
-                                              fillColor: Colors.grey.shade900,
-                                              contentPadding:
-                                                  const EdgeInsets.only(
-                                                      left: 14.0,
-                                                      bottom: 8.0,
-                                                      top: 8.0),
-                                              focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    color:
-                                                        Colors.grey.shade900),
-                                                borderRadius:
-                                                    BorderRadius.circular(25.7),
-                                              ),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    color:
-                                                        Colors.grey.shade900),
-                                                borderRadius:
-                                                    BorderRadius.circular(25.7),
-                                              ),
-                                            ),
-                                          ),
+                                          height: 190,
                                         ),
                                         const SizedBox(
                                           height: 60,
                                         ),
                                         Row(children: [
-                                          const SizedBox(
-                                            width: 180,
+                                          SizedBox(
+                                            width: 120,
                                           ),
                                           ElevatedButton(
                                               child: Container(
-                                                height: 20,
-                                                width: 100,
-                                                child: const Text(
-                                                  "Entrar",
-                                                  textAlign: TextAlign.center,
+                                                height: 100,
+                                                width: 200,
+                                                child: Padding(
+                                                  padding: EdgeInsets.symmetric(
+                                                      vertical: 20),
+                                                  child: const Text(
+                                                    "Entrar",
+                                                    textAlign: TextAlign.center,
+                                                  ),
                                                 ),
                                               ),
                                               style: ElevatedButton.styleFrom(
@@ -334,7 +261,7 @@ class _LoginState extends State<Login> {
                                                 onPrimary: Colors.white,
                                                 alignment: Alignment.bottomLeft,
                                                 textStyle: const TextStyle(
-                                                    fontSize: 15,
+                                                    fontSize: 40,
                                                     fontWeight: FontWeight.bold,
                                                     color: Colors.white),
                                                 padding:

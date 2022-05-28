@@ -205,7 +205,7 @@ class _MenuState extends State<Menu> {
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: <Widget>[
-                                                  Icon(Icons.vaccines_rounded,
+                                                  Icon(Icons.nature_people,
                                                       color:
                                                           Colors.green.shade800,
                                                       size: 70.0),

@@ -274,43 +274,40 @@ class _MenuState extends State<Menu> {
                                     ),
                                   ])),
                         ])),
-                    Expanded(
-                      child: Column(children: [
-                        SizedBox(height: 50),
-                        Container(
+                    SizedBox(width: 10),
+                    Column(children: [
+                      SizedBox(height: 50),
+                      Container(
                           height: size.height / 1.3,
                           width: size.width / 2,
                           child: Card(
-                              elevation: 15,
-                              child: Expanded(
-                                child: Column(children: [
-                                  const SizedBox(height: 30),
-                                  Text(
-                                    menuTitle,
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        fontSize: 25),
-                                  ),
-                                  const SizedBox(height: 100),
-                                  Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Text(
-                                      menuContent,
-                                      textAlign: TextAlign.center,
-                                    ),
-                                  ),
-                                ]),
-                              )),
-                        )
-                      ]),
-                      /*decoration: BoxDecoration(
+                            elevation: 15,
+                            child: Column(children: [
+                              const SizedBox(height: 30),
+                              Text(
+                                menuTitle,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    fontSize: 25),
+                              ),
+                              const SizedBox(height: 100),
+                              Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Text(
+                                  menuContent,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ]),
+                          )),
+                    ]),
+                    /*decoration: BoxDecoration(
                                           image: DecorationImage(
                                         image: AssetImage(
                                             "assets/glossy-machine-learning.png"),
                                         fit: BoxFit.fitWidth,
                                       ))*/
-                    ),
                   ]),
                 ]),
               )

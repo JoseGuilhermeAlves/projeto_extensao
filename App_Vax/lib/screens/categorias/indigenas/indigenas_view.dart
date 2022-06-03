@@ -242,50 +242,48 @@ class _IndigenasState extends State<Indigenas> {
                             height: 50,
                           ),
                           Container(
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.rectangle,
-                              borderRadius: BorderRadius.vertical(
-                                  top: Radius.circular(25)),
-                            ),
-                            height: size.height / 1.2,
-                            width: size.width / 1.6,
-                            //color: Colors.white,
-                            child: Card(
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.rectangle,
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(25)),
+                              ),
+                              height: size.height / 1.2,
+                              width: size.width / 1.6,
+                              //color: Colors.white,
+                              child: Card(
                                 shape: const RoundedRectangleBorder(
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(15))),
                                 elevation: 15,
-                                child: Expanded(
-                                  child: Column(children: [
-                                    const SizedBox(height: 30),
-                                    Text(
-                                      title,
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black54,
-                                          fontSize: 20),
+                                child: Column(children: [
+                                  const SizedBox(height: 30),
+                                  Text(
+                                    title,
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black54,
+                                        fontSize: 20),
+                                  ),
+                                  const SizedBox(height: 25),
+                                  Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Text(
+                                      textCard,
+                                      textAlign: TextAlign.center,
                                     ),
-                                    const SizedBox(height: 25),
-                                    Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: Text(
-                                        textCard,
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: Text(flavourText,
-                                          textAlign: TextAlign.center),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: Text(whenText,
-                                          textAlign: TextAlign.center),
-                                    ),
-                                  ]),
-                                )),
-                          )
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Text(flavourText,
+                                        textAlign: TextAlign.center),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Text(whenText,
+                                        textAlign: TextAlign.center),
+                                  ),
+                                ]),
+                              )),
                         ])),
                   )
                 ]),

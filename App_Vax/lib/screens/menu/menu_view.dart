@@ -6,6 +6,7 @@ import 'package:app_vax/controllers/menu/menu_controller.dart';
 import 'package:app_vax/screens/categorias/gestantes/gestantes_view.dart';
 import 'package:app_vax/screens/categorias/idoso/idosos_view.dart';
 import 'package:app_vax/screens/categorias/indigenas/indigenas_view.dart';
+import 'package:app_vax/screens/login/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -80,8 +81,14 @@ class _MenuState extends State<Menu> {
           ),
           iconTheme: IconThemeData(color: Colors.grey.shade200),
           leading: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.home),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      settings: const RouteSettings(name: '/login'),
+                      builder: (_) => Login()));
+            },
+            icon: Icon(Icons.arrow_back),
             color: Colors.grey.shade200,
           ),
           centerTitle: true,
@@ -116,16 +123,19 @@ class _MenuState extends State<Menu> {
                                 colors: [Colors.white, Colors.grey.shade100],
                                 begin: Alignment.centerLeft,
                                 end: Alignment.centerRight)),
-                        width: size.width / 6,
+                        width: size.width / 2.4,
                         height: size.height / 1.151,
                         child: Column(children: [
+                          SizedBox(
+                            height: 37,
+                          ),
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 1.0),
                             child: Text(
                               "Categorias",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 40,
+                                  fontSize: 30,
                                   color: Colors.grey.shade800),
                             ),
                           ),
@@ -133,14 +143,14 @@ class _MenuState extends State<Menu> {
                             height: 50,
                           ),
                           Container(
-                              height: 471,
-                              width: 200,
+                              height: size.height / 1.4,
+                              width: size.width / 1.3,
                               child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: <Widget>[
                                     Container(
                                       height: 150,
-                                      width: 200,
+                                      width: size.width / 1.3,
                                       child: Card(
                                           elevation: 15,
                                           shape: RoundedRectangleBorder(
@@ -266,54 +276,10 @@ class _MenuState extends State<Menu> {
                         ])),
                     Expanded(
                       child: Column(children: [
-                        SingleChildScrollView(
-                          physics: ScrollPhysics(),
-                          scrollDirection: Axis.vertical,
-                          child: Container(
-                            height: 100,
-                            width: 1160,
-                            child: DataTable(
-                                dividerThickness: 5,
-                                headingTextStyle: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold),
-                                headingRowColor:
-                                    MaterialStateProperty.resolveWith<Color>(
-                                        (Set<MaterialState> states) {
-                                  if (states.contains(MaterialState.selected))
-                                    return Theme.of(context)
-                                        .colorScheme
-                                        .primary
-                                        .withOpacity(0.08);
-                                  return Colors.black; // Use the default value.
-                                }),
-                                headingRowHeight: 40,
-                                dataTextStyle: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                                dataRowHeight: 35,
-                                dataRowColor:
-                                    MaterialStateProperty.resolveWith<Color>(
-                                        (Set<MaterialState> states) {
-                                  if (states.contains(MaterialState.selected))
-                                    return Theme.of(context)
-                                        .colorScheme
-                                        .primary
-                                        .withOpacity(0.08);
-                                  return Colors
-                                      .green.shade100; // Use the default value.
-                                }),
-                                columns: Get.find<MenuController>().getColumns(
-                                    Get.find<MenuController>().listColumns),
-                                rows: Get.find<MenuController>().getRows(
-                                    Get.find<MenuController>().listDummy)),
-                          ),
-                        ),
                         SizedBox(height: 50),
                         Container(
-                          height: 358,
-                          width: 900,
+                          height: size.height / 1.3,
+                          width: size.width / 2,
                           child: Card(
                               elevation: 15,
                               child: Expanded(
@@ -323,8 +289,8 @@ class _MenuState extends State<Menu> {
                                     menuTitle,
                                     style: const TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        color: Colors.black54,
-                                        fontSize: 50),
+                                        color: Colors.black,
+                                        fontSize: 25),
                                   ),
                                   const SizedBox(height: 100),
                                   Padding(

@@ -1,4 +1,5 @@
 import 'package:app_vax/controllers/categorias/indigenas/indigenas_controller.dart';
+import 'package:app_vax/screens/menu/menu_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -54,7 +55,13 @@ class _IndigenasState extends State<Indigenas> {
           ),
           iconTheme: IconThemeData(color: Colors.grey.shade200),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      settings: const RouteSettings(name: '/menu'),
+                      builder: (_) => Menu()));
+            },
             icon: const Icon(Icons.home),
             color: Colors.grey.shade200,
           ),
@@ -230,7 +237,7 @@ class _IndigenasState extends State<Indigenas> {
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black54,
-                                  fontSize: 50)),
+                                  fontSize: 40)),
                           const SizedBox(
                             height: 50,
                           ),
@@ -240,7 +247,7 @@ class _IndigenasState extends State<Indigenas> {
                               borderRadius: BorderRadius.vertical(
                                   top: Radius.circular(25)),
                             ),
-                            height: size.height / 1.5,
+                            height: size.height / 1.2,
                             width: size.width / 1.6,
                             //color: Colors.white,
                             child: Card(
@@ -256,9 +263,9 @@ class _IndigenasState extends State<Indigenas> {
                                       style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black54,
-                                          fontSize: 50),
+                                          fontSize: 20),
                                     ),
-                                    const SizedBox(height: 100),
+                                    const SizedBox(height: 25),
                                     Padding(
                                       padding: const EdgeInsets.all(10.0),
                                       child: Text(
